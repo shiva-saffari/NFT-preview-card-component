@@ -1,0 +1,187 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Outfit", sans-serif;
+  line-height: 1;
+  font-weight: 500;
+
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+
+  color: hsl(215, 51%, 70%);
+  background-color: hsl(217, 54%, 11%);
+}
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/**************************/
+/* BELOW 1440px (desktop) */
+/**************************/
+@media (max-width: 144em) {
+  .nft-preview-card-component {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 35rem;
+    background-color: hsl(216, 50%, 16%);
+    padding: 2.6rem;
+    border-radius: 11px;
+    overflow: hidden;
+  }
+
+  /*****************/
+  .img-box {
+    position: relative;
+    border-radius: 9px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.3s ease;
+    background-color: hsl(178, 100%, 50%);
+    cursor: pointer;
+  }
+
+  .img-box:hover .overlay {
+    opacity: 0.7;
+  }
+
+  .view {
+    background: no-repeat 50% 50% url(../images/icon-view.svg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* -ms-transform: translate(-50%, -50%); */
+    text-align: center;
+    width: 8rem;
+    height: 8rem;
+  }
+
+  /*********/
+
+  .heading-primary {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 1.2rem;
+  }
+
+  .heading-primary:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+  }
+
+  .text {
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+  }
+
+  .details {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 2px solid hsl(215, 32%, 27%);
+    padding-bottom: 2rem;
+  }
+
+  .detail {
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .detail-currency {
+    font-weight: 400;
+    color: hsl(178, 100%, 50%);
+  }
+
+  .detail-time {
+    font-weight: 300;
+    justify-content: end;
+  }
+
+  .icon {
+    display: block;
+  }
+
+  .icon-ethereum {
+    background-image: url(../images/icon-ethereum.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1.2rem;
+    height: 2rem;
+  }
+
+  .icon-clock {
+    background-image: url(../images/icon-clock.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .creator {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .img {
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 50%;
+    width: 4rem;
+  }
+
+  .creator p {
+    font-size: 1.6rem;
+    font-weight: 300;
+  }
+
+  .diff {
+    color: hsl(0, 0%, 100%);
+  }
+
+  .diff:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+  }
+}
